@@ -4,7 +4,7 @@
 
 Name:           %{?scl_prefix}%{pkg_name}
 Version:        1.9.1
-Release:        2.1%{?dist}
+Release:        2.2%{?dist}
 Summary:        Build Helper Maven Plugin
 Group:          Development/Libraries
 License:        MIT and ASL 2.0
@@ -17,7 +17,7 @@ BuildArch: noarch
 Source0:        %{pkg_name}-%{version}.tar.xz
 Source1:        http://www.apache.org/licenses/LICENSE-2.0.txt
 
-BuildRequires:  %{?scl_prefix_java_common}maven-local
+BuildRequires:  %{?scl_prefix}maven-local
 BuildRequires:  %{?scl_prefix}mvn(org.apache.maven:maven-artifact)
 BuildRequires:  %{?scl_prefix}mvn(org.apache.maven:maven-compat)
 BuildRequires:  %{?scl_prefix}mvn(org.apache.maven:maven-core)
@@ -70,6 +70,9 @@ set -e -x
 %doc header.txt LICENSE-2.0.txt
 
 %changelog
+* Mon Feb 08 2016 Michal Srb <msrb@redhat.com> - 1.9.1-2.2
+- Fix BR on maven-local & co.
+
 * Tue Jan 12 2016 Mikolaj Izdebski <mizdebsk@redhat.com> - 1.9.1-2.1
 - SCL-ize package
 
