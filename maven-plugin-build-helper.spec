@@ -4,7 +4,7 @@
 
 Name:           %{?scl_prefix}%{pkg_name}
 Version:        1.9.1
-Release:        2.2%{?dist}
+Release:        2.3%{?dist}
 Summary:        Build Helper Maven Plugin
 Group:          Development/Libraries
 License:        MIT and ASL 2.0
@@ -65,11 +65,15 @@ set -e -x
 %files -f .mfiles
 %doc header.txt LICENSE-2.0.txt
 %dir %{_javadir}/%{pkg_name}
+%dir %{_mavenpomdir}/%{pkg_name}
 
 %files javadoc -f .mfiles-javadoc
 %doc header.txt LICENSE-2.0.txt
 
 %changelog
+* Thu Apr 14 2016 Michal Srb <msrb@redhat.com> - 1.9.1-2.3
+- Fix directory ownership (Resolves: rhbz#1325866)
+
 * Mon Feb 08 2016 Michal Srb <msrb@redhat.com> - 1.9.1-2.2
 - Fix BR on maven-local & co.
 
