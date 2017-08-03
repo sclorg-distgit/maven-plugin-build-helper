@@ -3,7 +3,7 @@
 
 Name:           %{?scl_prefix}maven-plugin-build-helper
 Version:        1.9.1
-Release:        4.1%{?dist}
+Release:        4.2%{?dist}
 Summary:        Build Helper Maven Plugin
 Group:          Development/Libraries
 License:        MIT and ASL 2.0
@@ -59,6 +59,9 @@ cp %{SOURCE1} LICENSE-2.0.txt
 %doc header.txt LICENSE-2.0.txt
 
 %changelog
+* Thu Jun 22 2017 Michael Simacek <msimacek@redhat.com> - 1.9.1-4.2
+- Mass rebuild 2017-06-22
+
 * Wed Jun 21 2017 Java Maintainers <java-maint@redhat.com> - 1.9.1-4.1
 - Automated package import and SCL-ization
 
